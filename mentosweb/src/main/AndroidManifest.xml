@@ -2,4 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="site.exciter.mentosweb">
 
+    <application>
+        <activity
+            android:name=".ui.MentosWebViewActivity"
+            android:exported="false" />
+    </application>
+
 </manifest>
