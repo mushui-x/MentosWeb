@@ -2,10 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="site.exciter.mentosweb">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application>
+        <service android:name=".mainprocess.MainProcessCommandService" />
         <activity
             android:name=".ui.MentosWebViewActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:process=":MentosWebView"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>

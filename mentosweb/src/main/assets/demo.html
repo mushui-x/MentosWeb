@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="format-detection" content="telephone = no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <style type="text/css">
+         .item {
+         padding: 10px;
+         max-width: 600px;
+         margin: 0 auto;
+         text-align: center;
+         background-color: #999999;
+         margin-top: 20px;
+         }
+
+
+    </style>
+    <script>
+        function invokeAppToast(){
+            console.log("---invokeAppToast---");
+            mentosWeb.invokeNativeAction("showToast",{message:"This is a message from Js"})
+        }
+        function openNativePage(page){
+            console.log("---openNativePage---");
+            mentosWeb.invokeNativeAction("openPage",{targetPage:page})
+        }
+        function getUserInfo(){
+            console.log("---getUserInfo---");
+            mentosWeb.invokeNativeActionWithCallback("getUserInfo", {}, function(res) {
+                 var element = document.createElement("div");
+                 element.appendChild(document.createTextNode("response: "+res.username));
+                 document.getElementById('user_info_id').appendChild(element);
+            });
+        }
+
+
+    </script>
+    <script src="js/MentosWeb.js" charset="utf-8"></script>
+</head>
+<body style="height: 100%;">
+<div class="item" style="font-size: 20px; color: #ffffff" onclick="invokeAppToast()">调用native
+    ShowToast
+</div>
+<div class="item" style="font-size: 20px; color: #ffffff"
+     onclick="openNativePage('site.exciter.mentosweb.FirstActivity')">
+    打开native页面FirstActivity
+</div>
+<div class="item" style="font-size: 20px; color: #ffffff"
+     onclick="openNativePage('site.exciter.mentosweb.SecondActivity')">
+    打开native页面SecondActivity
+</div>
+<div id="user_info_id" class="item" style="font-size: 20px; color: #ffffff" onclick="getUserInfo()">
+    获取用户信息并返回结果
+</div>
+</body>
+</html>

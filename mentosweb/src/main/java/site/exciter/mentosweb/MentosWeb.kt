@@ -1,5 +1,6 @@
 package site.exciter.mentosweb
 
+import android.app.Application
 import android.content.Context
 import android.content.Intent
 import androidx.fragment.app.Fragment
@@ -12,10 +13,16 @@ import site.exciter.mentosweb.ui.MentosWebViewFragment
 
 object MentosWeb {
 
+    var application: Application? = null
+
+    fun init(application: Application) {
+        this.application = application
+    }
+
     fun startWebActivity(
         context: Context,
         url: String,
-        title: String,
+        title: String = "",
         enableActionBar: Boolean = true,
         enableNativeRefresh: Boolean = true
     ) {

@@ -1,6 +1,5 @@
-// ICallbackFromMainprocessToWebViewProcessInterface.aidl
 package site.exciter.mentosweb;
 
 interface ICallbackFromMainprocessToWebViewProcessInterface {
-    void onResult(String callbackname, String response);
+    void onResult(String callbacId, String response);
 }

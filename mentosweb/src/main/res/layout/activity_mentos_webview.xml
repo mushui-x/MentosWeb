@@ -18,7 +18,7 @@
             android:id="@+id/ivBack"
             android:layout_width="55dp"
             android:layout_height="match_parent"
-            android:padding="10dp"
+            android:padding="15dp"
             android:scaleType="centerInside"
             android:src="@drawable/ic_back_arrow"
             app:layout_constraintBottom_toBottomOf="parent"

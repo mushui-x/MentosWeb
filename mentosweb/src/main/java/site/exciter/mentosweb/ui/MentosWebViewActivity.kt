@@ -3,6 +3,7 @@ package site.exciter.mentosweb.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_mentos_webview.*
+import site.exciter.mentosweb.MentosWeb
 import site.exciter.mentosweb.R
 import site.exciter.mentosweb.constant.MENTOS_WEB_ENABLE_ACTION_BAR
 import site.exciter.mentosweb.constant.MENTOS_WEB_ENABLE_NATIVE_REFRESH
@@ -37,7 +38,7 @@ class MentosWebViewActivity : AppCompatActivity() {
     }
 
     private fun initFragment() {
-        val fragment = MentosWebViewFragment.newInstance(mUrl, mEnableNativeRefresh)
+        val fragment = MentosWeb.getWebFragment(mUrl, mEnableNativeRefresh)
         val fragmentManger = supportFragmentManager
         val transaction = fragmentManger.beginTransaction()
         transaction.replace(R.id.frameLayout, fragment).commit()

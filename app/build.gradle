@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -34,8 +35,16 @@ android {
 
 dependencies {
 
+    implementation project(path: ':mentosweb')
+
     implementation 'androidx.core:core-ktx:1.6.0'
     implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    //auto-service 依赖注解 注意需要使用kapt 最上边plugin也需要添加kapt
+    implementation 'com.google.auto.service:auto-service:1.0'
+    kapt 'com.google.auto.service:auto-service:1.0'
+
+    implementation 'org.greenrobot:eventbus:3.2.0'
 }
