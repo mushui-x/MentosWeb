@@ -20,6 +20,19 @@ object MentosWeb {
         return this
     }
 
+    /**
+     * 设置进度条颜色
+     * @param color 颜色值
+     */
+    fun setProgressBarColor(color: Int): MentosWeb {
+        MentosWebConfig.PROGRESS_BAR_COLOR = color
+        return this
+    }
+
+    /**
+     * 设置刷新控件的颜色方案
+     * @param colors 颜色方案，可设置多个颜色
+     */
     fun setRefreshSchemeColors(vararg colors: Int): MentosWeb {
         MentosWebConfig.REFRESH_SCHEME_COLORS = colors
         return this

@@ -19,6 +19,7 @@ class GlobalApplication : Application() {
         super.onCreate()
         mApplication = this
         MentosWeb.init(this)
-            .setRefreshSchemeColors(Color.BLUE)
+            .setProgressBarColor(Color.parseColor("#ff00CC99"))
+            .setRefreshSchemeColors(Color.parseColor("#ff00CC99"), Color.parseColor("#FFFF6155"))
     }
 }

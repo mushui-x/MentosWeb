@@ -1,6 +1,10 @@
 package site.exciter.mentosweb.ui
 
+import android.graphics.Color
+import android.graphics.drawable.ClipDrawable
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.view.Gravity
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -46,6 +50,14 @@ class MentosWebViewFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener, 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val progressDrawable =
+            ClipDrawable(
+                ColorDrawable(MentosWebConfig.PROGRESS_BAR_COLOR),
+                Gravity.START,
+                ClipDrawable.HORIZONTAL
+            )
+        progressBar.progressDrawable = progressDrawable
 
         refreshLayout.isEnabled = mEnableNativeRefresh
         refreshLayout.setColorSchemeColors(*MentosWebConfig.REFRESH_SCHEME_COLORS)

@@ -10,5 +10,6 @@ import android.graphics.Color
  */
 
 object MentosWebConfig {
-    var REFRESH_SCHEME_COLORS = intArrayOf(Color.BLACK)
+    var REFRESH_SCHEME_COLORS = intArrayOf(Color.parseColor("#ff00CC99"))
+    var PROGRESS_BAR_COLOR: Int = Color.parseColor("#ff00CC99")
 }
