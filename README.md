@@ -11,8 +11,7 @@
 
 #### 演示
 
-<img src="https://github.com/exciter-z/MentosWeb/blob/main/images/demo1.gif" alt="演示1" width="360" height="640"/>
-<img src="https://github.com/exciter-z/MentosWeb/blob/main/images/demo2.gif" alt="演示2" width="360" height="640"/>
+<img src="https://github.com/exciter-z/MentosWeb/blob/main/images/demo1.gif" alt="演示1" width="270" height="480"/><img src="https://github.com/exciter-z/MentosWeb/blob/main/images/demo2.gif" alt="演示2" width="270" height="480"/>
 
 #### 使用
 
