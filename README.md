@@ -11,8 +11,8 @@
 
 #### 演示
 
-<img src="https://github.com/exciter-z/MentosWeb/blob/main/images/demo1.gif" alt="演示1" width="640" height="360"/>
-<img src="https://github.com/exciter-z/MentosWeb/blob/main/images/demo2.gif" alt="图片替换文本" width="640" height="360"/>
+<img src="https://github.com/exciter-z/MentosWeb/blob/main/images/demo1.gif" alt="演示1" width="360" height="640"/>
+<img src="https://github.com/exciter-z/MentosWeb/blob/main/images/demo2.gif" alt="演示2" width="360" height="640"/>
 
 #### 使用
 
