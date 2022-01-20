@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import kotlinx.android.synthetic.main.fragment_mentos_webview.*
+import site.exciter.mentosweb.MentosWebConfig
 import site.exciter.mentosweb.R
 import site.exciter.mentosweb.constant.MENTOS_WEB_ENABLE_NATIVE_REFRESH
 import site.exciter.mentosweb.constant.MENTOS_WEB_URL
@@ -45,6 +46,11 @@ class MentosWebViewFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener, 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        refreshLayout.isEnabled = mEnableNativeRefresh
+        refreshLayout.setColorSchemeColors(*MentosWebConfig.REFRESH_SCHEME_COLORS)
+        refreshLayout.setOnRefreshListener(this)
+
         webView.apply {
             registerWebViewCallback(this@MentosWebViewFragment)
             loadUrl(mUrl)
@@ -59,11 +65,16 @@ class MentosWebViewFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener, 
     }
 
     override fun onPageStarted() {
-
+        progressBar.visibility = View.VISIBLE
     }
 
     override fun onPageFinished() {
+        refreshLayout.isRefreshing = false
+        progressBar.visibility = View.GONE
+    }
 
+    override fun onProgressChanged(progress: Int) {
+        progressBar.progress = progress
     }
 
     override fun onError() {

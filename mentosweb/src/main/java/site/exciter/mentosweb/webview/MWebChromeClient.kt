@@ -8,4 +8,8 @@ class MWebChromeClient(private val callback: MWebViewCallback) : WebChromeClient
     override fun onReceivedTitle(view: WebView?, title: String?) {
         title?.let { callback.onUpdateTitle(title) }
     }
+
+    override fun onProgressChanged(view: WebView?, newProgress: Int) {
+        callback.onProgressChanged(newProgress)
+    }
 }

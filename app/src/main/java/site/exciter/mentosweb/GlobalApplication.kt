@@ -1,6 +1,7 @@
 package site.exciter.mentosweb
 
 import android.app.Application
+import android.graphics.Color
 
 /**
  *
@@ -18,5 +19,6 @@ class GlobalApplication : Application() {
         super.onCreate()
         mApplication = this
         MentosWeb.init(this)
+            .setRefreshSchemeColors(Color.BLUE)
     }
 }

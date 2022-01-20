@@ -15,8 +15,14 @@ object MentosWeb {
 
     var application: Application? = null
 
-    fun init(application: Application) {
+    fun init(application: Application): MentosWeb {
         this.application = application
+        return this
+    }
+
+    fun setRefreshSchemeColors(vararg colors: Int): MentosWeb {
+        MentosWebConfig.REFRESH_SCHEME_COLORS = colors
+        return this
     }
 
     fun startWebActivity(

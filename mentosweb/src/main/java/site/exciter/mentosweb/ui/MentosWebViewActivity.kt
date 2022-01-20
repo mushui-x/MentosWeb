@@ -2,6 +2,7 @@ package site.exciter.mentosweb.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import kotlinx.android.synthetic.main.activity_mentos_webview.*
 import site.exciter.mentosweb.MentosWeb
 import site.exciter.mentosweb.R
@@ -34,7 +35,8 @@ class MentosWebViewActivity : AppCompatActivity() {
     }
 
     private fun initActionBar() {
-        ivBack.setOnClickListener { finish() }
+        action_bar.visibility = if (mEnableActionBar) View.VISIBLE else View.GONE
+        iv_back.setOnClickListener { finish() }
     }
 
     private fun initFragment() {
@@ -45,7 +47,7 @@ class MentosWebViewActivity : AppCompatActivity() {
     }
 
     fun updateTitle(title: String) {
-        tvTitle.text = title
+        tv_title.text = title
     }
 
 }

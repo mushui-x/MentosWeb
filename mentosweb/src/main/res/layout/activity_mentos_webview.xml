@@ -7,7 +7,7 @@
     tools:context=".ui.MentosWebViewActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/actionBar"
+        android:id="@+id/action_bar"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/ivBack"
+            android:id="@+id/iv_back"
             android:layout_width="55dp"
             android:layout_height="match_parent"
             android:padding="15dp"
@@ -26,7 +26,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tvTitle"
+            android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -43,6 +43,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/actionBar" />
+        app:layout_constraintTop_toBottomOf="@+id/action_bar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
