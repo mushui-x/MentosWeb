@@ -1,6 +1,5 @@
 package site.exciter.mentosweb.ui
 
-import android.graphics.Color
 import android.graphics.drawable.ClipDrawable
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
