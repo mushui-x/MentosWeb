@@ -15,6 +15,54 @@
 
 #### 使用
 
+##### 1、gradle引入依赖
+
+```
+repositories {
+    ...
+    mavenCentral()
+}
+```
+
+```
+implementation 'io.github.exciter-z:mentosweb:1.0.0'
+```
+
+##### 2、添加权限
+
+```
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+```
+
+##### 3、业务层实现
+
+web传入命令和参数 示例：`openPage`为命令，`{targetPage:page}`为参数
+
+```
+function openNativePage(page){
+      mentosWeb.invokeNativeAction("openPage",{targetPage:page})
+}
+```
+
+native继承Command处理命令
+
+```
+@AutoService(Command::class)
+class OpenPageCommand : Command {
+    override fun name(): String {
+        return "openPage"
+    }
+
+    override fun execute(
+        parameters: Map<*, *>,
+        callback: ICallbackFromMainprocessToWebViewProcessInterface?
+    ) {
+        //todo 处理业务逻辑
+    }
+}
+```
+
 #### 架构
 
 ![MentosWeb](images/MentosWebArchitecture.png)
